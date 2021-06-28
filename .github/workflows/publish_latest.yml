@@ -9,6 +9,9 @@ on:
     branches:
       - 'master'
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -26,4 +29,3 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/dicom-send-chop:latest
-          
