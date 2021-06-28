@@ -25,5 +25,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: cantools/dicom-send:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/dicom-send-chop:latest
           
